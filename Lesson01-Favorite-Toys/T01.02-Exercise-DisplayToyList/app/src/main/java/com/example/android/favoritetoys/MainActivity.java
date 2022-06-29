@@ -15,9 +15,10 @@
  */
 package com.example.android.favoritetoys;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.favoritetoys.databinding.ActivityMainBinding;
 
@@ -39,12 +40,14 @@ public class MainActivity extends AppCompatActivity {
         mToysListTextView = viewMain.tvToyNames;
 
         // TODO (4) Use the static ToyBox.getToyNames method and store the names in a String array
+        //  (done)
         String[] toyNames = ToyBox.getToyNames();
 
         // TODO (5) Loop through each toy and append the name to the TextView (add \n for spacing)
+        //  (done)
 
-        for(String toyName : toyNames){
-            mToysListTextView.append(toyName + "\n");
+        for (String toyName : toyNames) {
+            mToysListTextView.append(toyName + "\n\n\n");
         }
     }
 }
