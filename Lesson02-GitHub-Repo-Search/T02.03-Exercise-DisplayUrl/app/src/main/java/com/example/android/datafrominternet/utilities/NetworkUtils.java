@@ -57,10 +57,11 @@ public class NetworkUtils {
             Uri.Builder urlBuilder = new Uri.Builder();
 
             urlBuilder.scheme("https")
-                .authority("api.github.com")
-                .appendPath("search")
-                .appendPath("repositories")
-                .appendQueryParameter(PARAM_QUERY, "ABC" /*githubSearchQuery*/);
+                    .authority("api.github.com")
+                    .appendPath("search")
+                    .appendPath("repositories")
+                    .appendQueryParameter(PARAM_QUERY, githubSearchQuery)
+                    .appendQueryParameter(PARAM_SORT, sortBy);
 
             url = new URL(urlBuilder.build().toString());
 
